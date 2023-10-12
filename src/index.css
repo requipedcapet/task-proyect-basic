@@ -1,13 +1,174 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background: #010409;
+  color: #ffff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  font-size: 18px;
+  background: none;
+  font-weight: 600;
+}
+
+h1.app-title {
+  font-size: 50px;
+  margin: 2rem;
+  color: #006466;
+}
+
+.task-container {
+  font-size: 25px;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.task-container p {
+  font-size: 25px;
+}
+
+.task-search-container {
+  width: 60%;
+  margin-bottom: 3rem;
+}
+
+.task-search-container input {
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  background: #1b3a4b;
+  border: none;
+  border: 2px solid #006466
+}
+
+.task-search-container input:focus, .task-search-container input:hover  {
+  outline: none; /* Elimina el borde enfocado predeterminado */
+  border: 2px solid #006466; /* Establece un borde personalizado */
+  background: #95a0b05c;
+  font-size: 15px;
+}
+
+.task-search-container input::placeholder {
+  color: #010409;
+  font-weight: 700;
+  text-align: center;
+  font-size: 15px;
+}
+
+.task-search-container input:focus::placeholder, .task-search-container input:hover::placeholder {
+  color: #fff;
+}
+
+ul.task-list {
+  width: 55%;
+}
+
+ul.task-list li {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #006466;
+  margin: 8px;
+  list-style: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0d1117;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+ul.task-list span {
+  border: 1px solid;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60px;
+  align-items: center;
+  border: none;
+  padding: 1px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+ul.task-list span:hover {
+  cursor: pointer;
+}
+
+ul.task-list span.delete-task:hover {
+  background: #b73f3f;
+}
+
+ul.task-list span.delete-task {
+  font-size: 15px;
+  font-weight: 900;
+}
+.task-done {
+  background: #238636;
+}
+
+.task-pending {
+  background: #d7742bf7;
+}
+
+.add-task-container {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+}
+
+.add-task-container button {
+  width: 100%;
+  border-radius: 5%;
+  border: 1px solid #006466;
+  height: 100%;
+  border-radius: 100%;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.add-task-container button:hover {
+  width: 100%;
+  border-radius: 5%;
+  border: 1px solid #1b3a4b;
+  height: 100%;
+  border-radius: 100%;
+  font-size: 25px;
+  cursor: pointer;
+  background: #006466;
+}
+
+.skeleton-content {
+  padding: 10px 20px 5px 0px;
+  background: #02070fe6;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.task-card-steketon,
+.task-state-skeleton,
+.task-info-skeleton,
+.task-delete-skeleton {
+  animation: skeletonPulse 1s infinite alternate;
+}
+
+@keyframes skeletonPulse {
+  0% {
+    background: #0d1117;
+  }
+  100% {
+    background: #141c28;
+  }
 }

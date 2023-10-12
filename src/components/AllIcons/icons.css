@@ -1,0 +1,13 @@
+svg {
+    background: none;
+    width: 100%;
+}
+
+svg:hover {
+    background: none;
+    fill:white; 
+}
+
+.delete-task:hover {
+    color:white;
+}
