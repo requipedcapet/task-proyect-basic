@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/requipedcapet/task-proyect-basic/static/css/main.2947c7b5.css",
-    "main.js": "/requipedcapet/task-proyect-basic/static/js/main.ec2da30d.js",
-    "index.html": "/requipedcapet/task-proyect-basic/index.html",
-    "main.2947c7b5.css.map": "/requipedcapet/task-proyect-basic/static/css/main.2947c7b5.css.map",
-    "main.ec2da30d.js.map": "/requipedcapet/task-proyect-basic/static/js/main.ec2da30d.js.map"
+    "main.css": "/task-proyect-basic/static/css/main.2947c7b5.css",
+    "main.js": "/task-proyect-basic/static/js/main.ec2da30d.js",
+    "index.html": "/task-proyect-basic/index.html",
+    "main.2947c7b5.css.map": "/task-proyect-basic/static/css/main.2947c7b5.css.map",
+    "main.ec2da30d.js.map": "/task-proyect-basic/static/js/main.ec2da30d.js.map"
   },
   "entrypoints": [
     "static/css/main.2947c7b5.css",
