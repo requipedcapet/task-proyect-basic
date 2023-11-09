@@ -256,4 +256,30 @@ ul.task-list span.delete-task {
 .cancel-new-task-btn:hover {
   background: #9f1414e2;
 }
+
+/* Estilos para pantallas de celular */
+@media screen and (max-width: 767px) {
+  
+  .task-search-container {
+    margin-bottom: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .task-search-container input {
+    background: #1b3a4b;
+    border: 2px solid #006466;
+    border-radius: 8px;
+    height: 45px;
+    width: 98%;
+  }
+
+  ul.task-list {
+    width: 98%;
+    display: flex;
+    justify-content: center;
+  }
+
+}
  
