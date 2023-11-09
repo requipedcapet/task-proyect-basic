@@ -5,25 +5,26 @@ import { TaskList } from '../components/TaskList'
 import { TaskItem } from '../components/TaskItem';
 import { CreateTask } from '../components/CreateTask';
 import { LoadingTaskSkeleton } from '../components/LoadingTaskSkeleton'
-
+import { Modal } from "../components/Modal";
+import { TaskContext } from "../TaskContext";
+import { CreateTaskForm } from '../components/CreateTask/CreateTaskform'
 import '../index.css';
 
-function AppUi({
-    loading,
-    error,
-    completedTask,
-    totalTask,
-    searchTask,
-    setSearchTask,
-    searchedTask,
-    completeTask,
-    deleteTask
-}) {
+function AppUi() {
+    const {
+        loading,
+        error,
+        searchedTask,
+        completeTask,
+        deleteTask,
+        openModal
+    } = React.useContext(TaskContext);
+
     return(
         <>
             <h1 className="app-title">TaskSaver App</h1>
-            <TaskCounter completed={completedTask} totalTask={totalTask} />
-            <TaskSearch searchTask={searchTask} setSearchTask={setSearchTask} />
+            <TaskCounter/>
+            <TaskSearch/>
             <TaskList>
                 {loading && (<>
                     <div className="skeleton-content">
@@ -33,11 +34,11 @@ function AppUi({
                     </div>
                 </>)}
                 {error && 'Hubo un error'}
-                {(!loading && searchedTask.length === 0) && 'Colocate una tarea'}
+                {(!loading && searchedTask.length === 0) && 'Task not found'}
 
-                {searchedTask.map(elem => 
-                    <TaskItem 
-                        key={elem.text}
+                {searchedTask.map((elem, idx) => {
+                    return <TaskItem 
+                        key={idx}
                         completed={elem.completed}
                         text={elem.text}
                         onComplete={() => {
@@ -47,9 +48,16 @@ function AppUi({
                             deleteTask(elem.text);
                         }}
                     />
+                }
                 )}
             </TaskList>
             <CreateTask/>
+
+            {openModal && (
+                <Modal>
+                    <CreateTaskForm/>    
+                </Modal>
+            )}
         </>
     );
 }

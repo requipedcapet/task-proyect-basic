@@ -127,6 +127,7 @@ ul.task-list span.delete-task {
   right: 2rem;
   width: 60px;
   height: 60px;
+  z-index: 1;
 }
 
 .add-task-container button {
@@ -172,3 +173,87 @@ ul.task-list span.delete-task {
     background: #141c28;
   }
 }
+
+.modal-component {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #00000078;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#form-create-task {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70% 20%;
+  gap: 10px;
+  max-width: 300px;
+  background: #141c28;
+  padding: 1%;
+  width: 100%;
+  max-width: 800px;
+  height: 70%;
+  max-height: 350px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.form-row {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #141c28;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-row label {
+  font-size: 30px;
+  background: #141c28;
+  padding: 5px 0 10px 0;
+}
+
+.form-row textarea {
+  height: 124px;
+  width: 96%;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.button-row {
+  grid-column: 1 / 2;
+  display: flex;
+  justify-content: space-between;
+  background: #141c28;
+}
+
+.cancel-new-task-btn {
+  border-radius: 5px;
+  width: 25%;
+  border: none;
+  margin-left: 1rem;
+  background: #b73f3f;
+  cursor: pointer;
+}
+
+.create-new-task-btn {
+  border-radius: 5px;
+  width: 25%;
+  border: none;
+  margin-right: 1rem;
+  background: #238636;
+  cursor: pointer;
+}
+
+.create-new-task-btn:hover {
+  background: #1eab3ae6
+}
+
+.cancel-new-task-btn:hover {
+  background: #9f1414e2;
+}
+ 
