@@ -23,6 +23,9 @@ function AppUi() {
     return(
         <>
             <h1 className="app-title">TaskSaver App</h1>
+            <h4>For TSC</h4>  
+            <h6 className="app-title-h6">Made for Jhan</h6>
+            
             <TaskCounter/>
             <TaskSearch/>
             <TaskList>
@@ -34,7 +37,7 @@ function AppUi() {
                     </div>
                 </>)}
                 {error && 'Hubo un error'}
-                {(!loading && searchedTask.length === 0) && 'Task not found'}
+                {(!loading && searchedTask.length === 0) && 'Task not found Bronce V'}
 
                 {searchedTask.map((elem, idx) => {
                     return <TaskItem 

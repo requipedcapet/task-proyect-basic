@@ -22,8 +22,12 @@ p {
 
 h1.app-title {
   font-size: 50px;
-  margin: 2rem;
+  margin: 2rem 2rem 0 2rem;
   color: #006466;
+}
+
+h6.app-title-h6 {
+  margin-bottom: 2rem;
 }
 
 .task-container {
