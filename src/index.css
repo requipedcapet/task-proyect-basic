@@ -278,7 +278,8 @@ ul.task-list span.delete-task {
   ul.task-list {
     width: 98%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
 }
